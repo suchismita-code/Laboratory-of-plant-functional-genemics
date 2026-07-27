@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-labelledby="title desc">
+  <title id="title">No user profile photo</title>
+  <desc id="desc">A stylized user silhouette placeholder graphic in SVG format.</desc>
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#102a3a"/>
+      <stop offset="100%" stop-color="#0b1f2d"/>
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4aa5b2"/>
+      <stop offset="100%" stop-color="#88d1ac"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <rect width="500" height="500" rx="40" fill="url(#bgGradient)"/>
+  <circle cx="250" cy="250" r="200" fill="rgba(255,255,255,0.06)"/>
+  <circle cx="250" cy="250" r="150" fill="url(#accentGradient)" fill-opacity="0.18"/>
+  <g filter="url(#shadow)">
+    <circle cx="250" cy="220" r="88" fill="#0f1e29" stroke="#86c0b2" stroke-width="8"/>
+    <path d="M160 360 C160 300 190 260 250 260 C310 260 340 300 340 360" fill="#0f1e29" stroke="#86c0b2" stroke-width="8"/>
+  </g>
+  <path d="M210 190 C210 160 235 140 250 140 C265 140 290 160 290 190 C290 220 265 250 250 250 C235 250 210 220 210 190 Z" fill="#ffffff" fill-opacity="0.85"/>
+  <path d="M205 198 C205 170 230 150 250 150 C270 150 295 170 295 198 C295 226 270 246 250 246 C230 246 205 226 205 198 Z" fill="#0b1f2d"/>
+  <path d="M170 360 C170 310 210 280 250 280 C290 280 330 310 330 360" fill="#ffffff" fill-opacity="0.18"/>
+  <path d="M170 360 C170 320 210 290 250 290 C290 290 330 320 330 360" fill="#ffffff" fill-opacity="0.08"/>
+  <text x="250" y="452" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="600" text-anchor="middle" letter-spacing="0.05em">No Photo Available</text>
+</svg>

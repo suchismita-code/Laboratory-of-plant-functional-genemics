@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#04261e"/>
+      <stop offset="50%" stop-color="#004d3d"/>
+      <stop offset="100%" stop-color="#002b22"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00A885"/>
+      <stop offset="50%" stop-color="#0FB9B1"/>
+      <stop offset="100%" stop-color="#FFC857"/>
+    </linearGradient>
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background circle with gradient -->
+  <circle cx="200" cy="200" r="190" fill="url(#bgGrad)" stroke="#00A885" stroke-width="6" filter="url(#dropShadow)"/>
+  
+  <!-- Decorative tech rings -->
+  <circle cx="200" cy="200" r="170" fill="none" stroke="#FFFFFF" stroke-opacity="0.1" stroke-dasharray="8 6"/>
+  <circle cx="200" cy="200" r="150" fill="none" stroke="url(#accentGrad)" stroke-opacity="0.3" stroke-dasharray="40 10"/>
+
+  <!-- Academic Researcher Icon Silhouette -->
+  <g fill="none" stroke="#00A885" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <!-- User Head & Shoulders -->
+    <circle cx="200" cy="150" r="45" fill="#04261e" stroke="#00A885" stroke-width="6"/>
+    <path d="M 120 280 C 120 220, 280 220, 280 280 L 280 300 L 120 300 Z" fill="#04261e" stroke="#00A885" stroke-width="6"/>
+    <!-- Graduation Cap Overlay -->
+    <polygon points="200,85 245,105 200,125 155,105" fill="#00A885" stroke="#FFC857" stroke-width="2"/>
+    <path d="M 235 110 L 235 140 C 235 140, 230 145, 235 150" stroke="#FFC857" stroke-width="4"/>
+  </g>
+  
+  <!-- Name Tag Overlay -->
+  <rect x="60" y="315" width="280" height="40" rx="20" fill="#04261e" fill-opacity="0.95" stroke="#FFC857" stroke-width="2"/>
+  <text x="200" y="341" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">KAMAL KISHORE</text>
+</svg>

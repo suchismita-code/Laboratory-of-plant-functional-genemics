@@ -1,0 +1,545 @@
+/* ==========================================================================
+  Academic Website Custom Stylesheets
+   Kindi Design System Integration (#00A885, #0FB9B1, #FFC857, #222222)
+   ========================================================================== */
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Core Brand Colors */
+  --primary-green: #00A885;
+  --primary-hover: #008567;
+  --secondary-teal: #0FB9B1;
+  --accent-gold: #FFC857;
+  
+  /* Background & Neutral Colors */
+  --bg-white: #FFFFFF;
+  --bg-soft-grey: #F7F7F7;
+  --border-grey: #E0E0E0;
+  
+  /* Text Colors */
+  --text-heading: #222222;
+  --text-body: #555555;
+  --text-muted: #777777;
+  
+  /* Supporting UI Colors */
+  --alert-red: #E63946;
+  --badge-light-green: #CDEFE5;
+  --badge-green-text: #006b54;
+  --overlay-dark: rgba(0, 0, 0, 0.4);
+  
+  /* Typography */
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Outfit', system-ui, -apple-system, sans-serif;
+  
+  /* Shadows & Transitions */
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 8px 24px rgba(0, 168, 133, 0.08);
+  --shadow-lg: 0 16px 36px rgba(0, 168, 133, 0.15);
+  --transition-speed: 0.25s ease;
+}
+
+/* Global Reset & Base Setup */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-body);
+  background-color: var(--bg-white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-heading);
+}
+
+.bg-soft-grey {
+  background-color: var(--bg-soft-grey) !important;
+}
+
+/* Buttons - Kindi Style */
+.btn-primary {
+  background-color: var(--primary-green) !important;
+  border-color: var(--primary-green) !important;
+  color: #FFFFFF !important;
+  font-weight: 600;
+  transition: all var(--transition-speed);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: var(--primary-hover) !important;
+  border-color: var(--primary-hover) !important;
+  box-shadow: 0 6px 16px rgba(0, 168, 133, 0.3);
+  transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+  background-color: transparent !important;
+  border-color: var(--primary-green) !important;
+  color: var(--primary-green) !important;
+  font-weight: 600;
+  transition: all var(--transition-speed);
+}
+
+.btn-outline-primary:hover, .btn-outline-primary.active {
+  background-color: var(--primary-green) !important;
+  border-color: var(--primary-green) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(0, 168, 133, 0.25);
+}
+
+.text-primary {
+  color: var(--primary-green) !important;
+}
+
+.text-gold {
+  color: var(--accent-gold) !important;
+}
+
+/* Custom Form Control Styling */
+.form-control, .form-select {
+  border-color: var(--border-grey);
+  padding: 0.65rem 1rem;
+  border-radius: 0.6rem;
+  font-size: 0.95rem;
+  transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--primary-green) !important;
+  box-shadow: 0 0 0 0.25rem rgba(0, 168, 133, 0.2) !important;
+  outline: none;
+}
+
+/* Academic Card Design */
+.academic-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border-grey);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed), border-color var(--transition-speed);
+}
+
+.academic-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-green);
+}
+
+/* Navbar Custom Styling */
+.navbar-academic {
+  background: rgba(4, 38, 30, 0.96) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.navbar-academic .navbar-brand {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.35rem;
+  color: #ffffff !important;
+}
+
+.navbar-academic .navbar-brand span {
+  color: var(--accent-gold);
+}
+
+.navbar-academic .nav-link {
+  color: #e2e8f0 !important;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.85rem !important;
+  border-radius: 0.5rem;
+  transition: all var(--transition-speed);
+}
+
+.navbar-academic .nav-link:hover,
+.navbar-academic .nav-link.active {
+  color: #ffffff !important;
+  background: rgba(0, 168, 133, 0.3);
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  background: linear-gradient(135deg, #04261e 0%, #004d3d 50%, #002b22 100%);
+  color: #ffffff;
+  padding-top: 7rem;
+  padding-bottom: 5rem;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(15, 185, 177, 0.18) 0%, rgba(0, 0, 0, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 200, 87, 0.15);
+  border: 1px solid rgba(255, 200, 87, 0.4);
+  color: var(--accent-gold);
+  padding: 0.35rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  margin-bottom: 1.25rem;
+}
+
+.hero-title {
+  color: #ffffff;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  color: var(--accent-gold);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.profile-img-container {
+  position: relative;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.profile-img-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 1.25rem;
+  border: 4px solid var(--primary-green);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.quick-links-bar a {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  font-size: 1.2rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.quick-links-bar a:hover {
+  background: var(--primary-green);
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* Quick Nav Cards Bar */
+.quick-nav-card {
+  background: var(--bg-white);
+  border-radius: 0.85rem;
+  padding: 1.25rem;
+  border: 1px solid var(--border-grey);
+  transition: all 0.25s ease;
+  text-decoration: none;
+  color: var(--text-heading);
+  display: block;
+}
+
+.quick-nav-card:hover {
+  border-color: var(--primary-green);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+  color: var(--primary-green);
+}
+
+.quick-nav-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 0.75rem;
+  background: var(--badge-light-green);
+  color: var(--primary-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Section Header Styling - Stacked Flex Column */
+.section-header {
+  margin-bottom: 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-subtitle {
+  display: block;
+  color: var(--primary-green);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-green), var(--accent-gold));
+  border-radius: 2px;
+  margin: 0.75rem auto 0 auto;
+}
+
+/* News Section */
+.news-card {
+  border-left: 4px solid var(--primary-green);
+}
+
+.news-date-badge {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--badge-green-text);
+  background: var(--badge-light-green);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+}
+
+/* Publications & Patents */
+.nav-pills-academic .nav-link {
+  color: var(--text-heading);
+  background: var(--bg-white);
+  border: 1px solid var(--border-grey);
+  font-weight: 600;
+  padding: 0.65rem 1.5rem;
+  border-radius: 2rem;
+  margin: 0 0.25rem;
+  transition: all 0.2s ease;
+}
+
+.nav-pills-academic .nav-link.active {
+  background: var(--primary-green);
+  color: #ffffff;
+  border-color: var(--primary-green);
+  box-shadow: 0 4px 14px rgba(0, 168, 133, 0.3);
+}
+
+.publication-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.3rem 0.75rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-journal {
+  background: var(--badge-light-green);
+  color: var(--badge-green-text);
+}
+
+.badge-conference {
+  background: rgba(15, 185, 177, 0.15);
+  color: #087f79;
+}
+
+.badge-patent-granted {
+  background: var(--badge-light-green);
+  color: var(--badge-green-text);
+}
+
+.badge-patent-pending {
+  background: #FFF4D9;
+  color: #b45309;
+}
+
+.author-highlight {
+  font-weight: 700;
+  color: var(--text-heading);
+  text-decoration: underline;
+  text-decoration-color: var(--primary-green);
+  text-underline-offset: 3px;
+}
+
+/* Gallery Section */
+.gallery-item {
+  position: relative;
+  border-radius: 0.85rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(4, 38, 30, 0.88) 0%, rgba(4, 38, 30, 0) 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.25rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+/* Member Cards */
+.member-avatar {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 1rem auto;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-green);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.featured-member-card {
+  border: 2px solid var(--primary-green) !important;
+  background: linear-gradient(180deg, #ffffff 0%, #f0fdf9 100%);
+  position: relative;
+}
+
+.lead-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary-green);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.85rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 168, 133, 0.3);
+}
+
+/* Contact & Footer */
+.contact-icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 0.75rem;
+  background: var(--badge-light-green);
+  color: var(--primary-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.footer-academic {
+  background: #04261e;
+  color: #e2e8f0;
+  border-top: 1px solid #0a3d31;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+.footer-academic h5 {
+  color: #ffffff;
+}
+
+.footer-link {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: var(--accent-gold);
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--primary-green);
+  color: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  box-shadow: 0 8px 20px rgba(0, 168, 133, 0.4);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  background: var(--primary-hover);
+  transform: translateY(-3px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+  .hero-section {
+    padding-top: 6rem;
+    padding-bottom: 3.5rem;
+    text-align: center;
+  }
+
+  .profile-img-container {
+    margin-top: 2.5rem;
+  }
+}
