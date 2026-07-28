@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Libin Thomas',
       role: 'PhD Student',
       researchArea: 'Wireless Telemetry & Sensor Networks',
-      image: 'assets/images/members/member-mtech-1.svg',
+      image: 'assets/images/members/libin.jpg',
       email: 'meera.s@xyztech.ac.in',
       scholar: '#',
       linkedin: '#',
